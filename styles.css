@@ -40,30 +40,38 @@ footer p {
 }
 
 .container {
-  max-width: 860px;
+  max-width: 800px;
   margin: 0 auto;
   padding: 100px 20px 50px;
 }
 
-.section {
+.region {
   display: grid;
-  grid-template-columns: 200px 200px 200px;
+  grid-template-columns: repeat(3, 200px);
   grid-gap: 20px;
   position: relative;
 }
 
-.section + .section {
-  margin-top: 80px;
+.region + .region {
+  margin-top: 150px;
 }
 
-.section h2 {
+.region h2 {
   margin-bottom: 10px;
-  font-size: 22px;
-  top: -45px;
+  font-size: 40px;
+  top: -70px;
+  left: 50%;
+  transform: translateX(-50%);
   position: absolute;
 }
 
-.item {
+.part h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.box {
   box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 5px;
   border-radius: 8px;
   padding: 20px 35px;
@@ -72,7 +80,7 @@ footer p {
   cursor: pointer;
 }
 
-.item:hover {
+.box:hover {
   margin: -5px;
   padding: 25px 40px;
 }
@@ -81,6 +89,10 @@ dt {
   margin-bottom: 10px;
   font-size: 20px;
   font-weight: bold;
+}
+
+dd + dt {
+  margin-top: 20px;
 }
 
 dd {
@@ -94,10 +106,10 @@ dd {
   .container {
     padding-top: 70px;
   }
-  .section {
+  .region {
     grid-template-columns: 1fr 1fr 1fr;
   }
-  .item {
+  .box {
     padding: 20px;
   }
 }
@@ -106,13 +118,13 @@ dd {
   .container {
     margin: 0;
   }
-  .section {
+  .region {
     grid-template-columns: 1fr 1fr;
   }
-  .item {
+  .box {
     padding: 20px 15px;
   }
-  .item:hover {
+  .box:hover {
     padding: 25px 20px;
   }
   dt {
@@ -124,7 +136,7 @@ dd {
 }
 
 @media screen and (max-width: 320px) {
-  .section {
+  .region {
     grid-gap: 10px;
     grid-template-columns: 1fr;
   }
