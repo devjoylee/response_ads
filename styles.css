@@ -42,7 +42,7 @@ footer p {
 .container {
   max-width: 800px;
   margin: 0 auto;
-  padding: 100px 20px 50px;
+  padding: 100px 20px 80px;
 }
 
 .region {
@@ -58,11 +58,29 @@ footer p {
 
 .region h2 {
   margin-bottom: 10px;
-  font-size: 40px;
+  font-size: 33px;
   top: -70px;
   left: 50%;
   transform: translateX(-50%);
   position: absolute;
+}
+
+.region h2::before,
+.region h2::after {
+  content: '';
+  background-color: #d1d1d1;
+  width: 350px;
+  height: 1px;
+  position: absolute;
+  top: 50%;
+}
+
+.region h2::before {
+  right: 120%;
+}
+
+.region h2::after {
+  left: 120%;
 }
 
 .part h3 {
@@ -81,8 +99,8 @@ footer p {
 }
 
 .box:hover {
-  margin: -5px;
-  padding: 25px 40px;
+  margin: -3px;
+  padding: 23px 38px;
 }
 
 dt {
